@@ -5,9 +5,7 @@ import { useAuthContext } from "@asgardeo/auth-react";
 
 function App() {
     /** Empty state  */
-    const { state, signIn, signOut, httpRequest, getIDToken, requestCustomGrant, getDecodedIDToken } = useAuthContext();
-
-    const [ decodedIdToken, setDecodedIdToken ] = useState();
+    const { state, signIn, signOut, httpRequest, getIDToken, requestCustomGrant } = useAuthContext();
     const [ insuranceClaimsFromAPI, setInsuranceClaimsFromAPI ] = useState(undefined);
 
     React.useEffect(() => {
